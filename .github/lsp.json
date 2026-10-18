@@ -1,0 +1,10 @@
+{
+  "lspServers": {
+    "python": {
+      "command": ".venv/Scripts/pylsp.exe",
+      "fileExtensions": {
+        ".py": "python"
+      }
+    }
+  }
+}

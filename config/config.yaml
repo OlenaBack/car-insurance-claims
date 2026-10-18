@@ -1,0 +1,23 @@
+# Hosted: Gemini. Local: Ollama. Both share one interface (see src/llm/base.py).
+models:
+  - name: gemini
+    provider: gemini
+    model: TODO          # pick a Flash variant
+  - name: ollama-qwen
+    provider: ollama
+    model: qwen2.5:3b
+
+sampling_configs:
+  - name: deterministic
+    temperature: 0.0
+    top_p: 1.0
+  - name: creative
+    temperature: 0.7
+    top_p: 0.9
+
+prompt_versions: [v1]
+timeout_seconds: 60
+max_retries: 3
+data_path: data/texts.jsonl
+golden_path: data/golden.jsonl
+results_dir: results
